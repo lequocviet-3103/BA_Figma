@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<iframe
+ src="http://localhost:5173"
+ width="900"
+ height="900"
+></iframe>
+
+<script>
+
+window.onmessage = (event)=>{
+
+  const msg = event.data.pluginMessage
+
+  if(msg){
+    parent.postMessage({pluginMessage:msg},"*")
+  }
+
+}
+
+</script>
+
+</body>
+</html>

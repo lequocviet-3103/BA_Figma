@@ -1,0 +1,10 @@
+export function sendToFigma(data){
+
+  window.parent.postMessage({
+    pluginMessage:{
+      type:"generate-ui",
+      data:json
+    }
+  },"*")
+
+}
